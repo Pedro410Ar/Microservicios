@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/codeki
+    username: root
+    password: 1234M
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+
+  server:
+    port: 0
+
+  eureka:
+    instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      preferIpAddress: true
+    client:
+      fetchRegistry: true
+      registerWithEureka: true
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka

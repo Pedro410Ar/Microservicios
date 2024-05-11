@@ -2,8 +2,6 @@ package air.plane.service;
 
 
 import air.plane.model.Plane;
-import air.plane.utils.PlaneUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
