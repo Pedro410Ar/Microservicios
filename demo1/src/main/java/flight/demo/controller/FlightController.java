@@ -27,6 +27,13 @@ public class FlightController {
         return flightService.findAllflight();
     }
 
+    //vuelo x ID
+    @GetMapping("/{id}")
+    public Optional<Flight> getFlightById(@PathVariable Long id) {
+        return flightService.getFlightById(id);
+    }
+
+    //trae el dolar
     @GetMapping("/dollar")
     public double getDolar(){
         return flightService.getDolar();
@@ -39,11 +46,13 @@ public class FlightController {
     }
     */
 
+    //Trae ofertas
     @GetMapping("/sale")
     public List<Flight> saleFlight(@RequestParam Integer offerPrice) {
         return flightService.saleFlight(offerPrice);
     }
 
+    //Trae segun origen
     @GetMapping("/origin")
     public List<Flight> getFlightsByLocations(@RequestParam String origin) {
         return flightService.getByOrigin(origin);

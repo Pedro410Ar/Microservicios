@@ -1,18 +1,19 @@
 package air.plane.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
+@Getter
+@Setter
 public class Plane {
 
     private Long ID;
-    private FlightDTO flight;
-    private String Brand;
+    private FlightDTO flightDTO;
+    private String brand;
     private String model;
 
 }

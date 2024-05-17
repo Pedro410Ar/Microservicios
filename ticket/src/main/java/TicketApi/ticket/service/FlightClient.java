@@ -6,11 +6,19 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Optional;
 
-@FeignClient(name = "flight-api")
+@FeignClient(name = "flight-service")
 public interface FlightClient {
 
-    @GetMapping("/flight/t")
-    List<FlightDTO> getAllFlights();
+    @GetMapping("/flight")
+    List<FlightDTO> readFlights();
+
+    @GetMapping("/flight/dollar")
+    double getDolar();
+
+    @GetMapping("/flight/{id}")
+    Optional<FlightDTO> getFlightById();
+
 
 }

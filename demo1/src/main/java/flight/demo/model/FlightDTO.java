@@ -17,6 +17,5 @@ public class FlightDTO {
    private double converterPrice;
    private String frequency;
    private Company company;
-   
 
 }

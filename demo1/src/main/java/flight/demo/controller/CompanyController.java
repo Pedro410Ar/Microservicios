@@ -51,7 +51,7 @@ public class CompanyController {
             return "Delete Company was OK";
         }catch(ResourceCompanyNotFoundException e){
             System.out.println(e.getMessage());
-            return "No se encontro la compañia";
+            return "Company was not found";
         }
        
     }

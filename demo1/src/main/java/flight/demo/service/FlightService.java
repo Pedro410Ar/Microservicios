@@ -37,6 +37,11 @@ public class FlightService  {
                 .collect(Collectors.toList());
     }
 
+    //vuelo x ID
+    public Optional<Flight> getFlightById(Long id) {
+        return flightRepository.findById(id);
+    }
+
     public double getDolar(){
         return flightUtils.fetchDolar().getPromedio();
     }
